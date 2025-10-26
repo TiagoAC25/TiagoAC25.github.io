@@ -1,63 +1,182 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Tiago AC — Portfolio</title>
-    <style>
-      body {
-        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Ubuntu, sans-serif;
-        background: #0f172a;
-        color: #f8fafc;
-        min-height: 100vh;
-        display: grid;
-        place-content: center;
-        text-align: center;
-        padding: 2rem;
-      }
-      .card {
-        background: rgba(30, 41, 59, 0.6);
-        border: 1px solid rgba(148, 163, 184, 0.2);
-        border-radius: 1rem;
-        padding: 2rem 2.5rem;
-        box-shadow: 0 30px 80px rgba(0,0,0,0.6);
-        max-width: 460px;
-      }
-      h1 {
-        font-size: 1.6rem;
-        line-height: 1.3;
-        font-weight: 600;
-        margin: 0 0 1rem;
-      }
-      p {
-        margin: 0 0 1rem;
-        font-size: 0.95rem;
-        color: #cbd5e1;
-      }
-      .note {
-        font-size: 0.8rem;
-        opacity: 0.7;
-        margin-top: 1.5rem;
-      }
-      a {
-        color: #38bdf8;
-        text-decoration: none;
-        font-weight: 500;
-      }
-      a:hover {
-        text-decoration: underline;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="card">
-      <h1>Website under construction 👷‍♂️</h1>
-      <p>Hello, I'm <strong>Tiago</strong> — Data Scientist and AI enthusiast.</p>
-      <p>This will soon be my personal portfolio and project showcase.</p>
-      <p>For now, you can check my work on <a href="https://github.com/TiagoAC25" target="_blank">GitHub</a>.</p>
-      <div class="note">
-        <p>Powered by GitHub Pages</p>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tiago AC — Data Science Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; scroll-behavior: smooth; }
+    body {
+      font-family: "Segoe UI", Roboto, Ubuntu, sans-serif;
+      background-color: #0f172a;
+      color: #e2e8f0;
+      line-height: 1.6;
+    }
+    header {
+      position: fixed;
+      width: 100%;
+      background: rgba(15, 23, 42, 0.95);
+      padding: 1rem 2rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      z-index: 10;
+    }
+    header h1 { font-size: 1.1rem; color: #38bdf8; letter-spacing: 1px; }
+    nav a {
+      color: #e2e8f0;
+      margin-left: 1.5rem;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    nav a:hover { color: #38bdf8; }
+
+    section {
+      padding: 6rem 2rem 4rem;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    h2 {
+      font-size: 1.6rem;
+      color: #38bdf8;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+    }
+
+    .intro {
+      text-align: center;
+      padding-top: 5rem;
+    }
+    .intro h1 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .intro p {
+      color: #cbd5e1;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .skills {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+    .skill {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 8px;
+      padding: 0.8rem;
+      text-align: center;
+    }
+
+    .project {
+      background: rgba(255, 255, 255, 0.05);
+      border-radius: 10px;
+      padding: 1rem 1.5rem;
+      margin-bottom: 1.2rem;
+      transition: 0.2s;
+    }
+    .project:hover { transform: translateY(-4px); }
+    .project h3 { color: #f8fafc; margin-bottom: 0.5rem; }
+    .project p { color: #cbd5e1; font-size: 0.9rem; }
+    .project a {
+      display: inline-block;
+      margin-top: 0.5rem;
+      color: #38bdf8;
+      text-decoration: none;
+      font-weight: 500;
+    }
+    .project a:hover { text-decoration: underline; }
+
+    footer {
+      text-align: center;
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      margin-top: 2rem;
+      color: #94a3b8;
+      font-size: 0.9rem;
+    }
+    footer a {
+      color: #38bdf8;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    footer a:hover { text-decoration: underline; }
+  </style>
+</head>
+
+<body>
+  <header>
+    <h1>Tiago AC</h1>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <h1>Hi, I'm Tiago 👋</h1>
+    <p>I'm a Data Scientist and AI enthusiast passionate about transforming data into intelligent solutions. 
+    This is my portfolio where I share my projects, ideas, and experiments with data, machine learning, and automation.</p>
+  </section>
+
+<section id="about">
+  <h2>About Me</h2>
+  <p>
+    I'm Tiago — I hold a <strong>Bachelor’s degree in Artificial Intelligence and Data Science</strong> 
+    and a <strong>Master’s degree in Engineering and Data Science</strong>.  
+    I’m passionate about exploring how data, algorithms, and automation can solve real-world problems 
+    and create intelligent, efficient systems.  
+    My main interests include machine learning, data analysis, artificial intelligence, and the development 
+    of AI-driven tools that support decision-making and innovation.  
+    I’m continuously learning and experimenting with new technologies to deepen my understanding of how data and AI can shape the future.
+  </p>
+
+  <div class="skills">
+    <div class="skill">Python</div>
+    <div class="skill">Pandas</div>
+    <div class="skill">Scikit-learn</div>
+    <div class="skill">PySpark</div>
+    <div class="skill">SQL</div>
+    <div class="skill">BigQuery</div>
+    <div class="skill">Power BI</div>
+    <div class="skill">Machine Learning</div>
+    <div class="skill">NLP</div>
+    <div class="skill">AI Agents</div>
+  </div>
+</section>
+
+
+
+  <section id="projects">
+    <h2>Projects</h2>
+
+    <!-- 
+    Example project template (copy and fill later):
+
+    <div class="project">
+      <h3>🔥 Project Title Here</h3>
+      <p>Short project description here. Example: Exploratory and predictive analysis of [dataset/topic], using [methods or technologies].</p>
+      <a href="https://github.com/TiagoAC25/project-link" target="_blank">View on GitHub →</a>
     </div>
-  </body>
+    -->
+
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>If you'd like to connect, collaborate, feel free to reach out!</p>
+    <footer>
+      <a href="tiagoaraujocoelho@gmail.com">📧 Email</a> |
+      <a href="https://github.com/TiagoAC25" target="_blank">🐙 GitHub</a> |
+      <a href="linkedin.com/in/tiago-coelho-0726022b3" target="_blank">💼 LinkedIn</a>
+      <p style="margin-top:1rem;">© 2025 Tiago AC — Built with GitHub Pages</p>
+    </footer>
+  </section>
+</body>
 </html>
